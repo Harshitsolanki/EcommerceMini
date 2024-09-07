@@ -1,0 +1,29 @@
+﻿@page
+@model EcommerceMiniWeb.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register User";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post">
+    <div>
+        <label asp-for="registerDto.Name"></label>
+        <input asp-for="registerDto.Name" class="form-control" required />
+        <span asp-validation-for="registerDto.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="registerDto.Email"></label>
+        <input asp-for="registerDto.Email" class="form-control" required />
+        <span asp-validation-for="registerDto.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="registerDto.Password"></label>
+        <input asp-for="registerDto.Password" class="form-control" type="password" required />
+        <span asp-validation-for="registerDto.Password" class="text-danger"></span>
+    </div>
+    <div>
+        <br />
+    <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>

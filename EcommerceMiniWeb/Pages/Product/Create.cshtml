@@ -1,0 +1,32 @@
+﻿@page
+@model EcommerceMiniWeb.Pages.Product.CreateProductModel
+<h1>Create Product</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="productDto.Name"></label>
+        <input asp-for="productDto.Name" class="form-control" />
+        <span asp-validation-for="productDto.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Price"></label>
+        <input asp-for="productDto.Price" class="form-control" />
+        <span asp-validation-for="productDto.Price" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Sku"></label>
+        <input asp-for="productDto.Sku" class="form-control" />
+        <span asp-validation-for="productDto.Sku" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Description"></label>
+        <textarea asp-for="productDto.Description" class="form-control"></textarea>
+        <span asp-validation-for="productDto.Description" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.IsActive"></label>
+        <input asp-for="productDto.IsActive" type="checkbox" class="form-check-input" />
+        <span asp-validation-for="productDto.IsActive" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

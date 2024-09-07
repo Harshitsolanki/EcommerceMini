@@ -1,0 +1,9 @@
+﻿@page "{id:int}"
+@model EcommerceMiniWeb.Pages.Product.DeleteProductModel
+<h1>Delete Product</h1>
+
+<form method="post">
+    <p>Are you sure you want to delete this product?</p>
+    <input type="hidden" name="productDto.Id" value="@Model.productDto.Id" />
+    <button type="submit">Delete</button>
+</form>

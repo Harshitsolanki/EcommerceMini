@@ -1,0 +1,34 @@
+﻿@page "{id:int}"
+@model EcommerceMiniWeb.Pages.Product.EditProductModel
+<h1>Edit Product</h1>
+
+<form method="post">
+    <div>
+        <input asp-for="productDto.Name" class="form-control" value="@Model.productDto.Name" />
+        <span asp-validation-for="productDto.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Price"></label>
+        <input asp-for="productDto.Price" class="form-control" value="@Model.productDto.Price" />
+        <span asp-validation-for="productDto.Price" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Sku"></label>
+        <input asp-for="productDto.Sku" class="form-control" value="@Model.productDto.Sku" />
+        <span asp-validation-for="productDto.Sku" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.Description"></label>
+        <textarea asp-for="productDto.Description" class="form-control" value="@Model.productDto.Description"></textarea>
+        <span asp-validation-for="productDto.Description" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="productDto.IsActive"></label>
+        <input asp-for="productDto.IsActive" type="checkbox" class="form-check-input" value="@Model.productDto.IsActive" />
+        <span asp-validation-for="productDto.IsActive" class="text-danger"></span>
+    </div>
+    
+    <input type="hidden" name="productDto.Id" value="@Model.productDto.Id" />
+        
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
